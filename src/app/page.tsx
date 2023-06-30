@@ -1,4 +1,3 @@
-import React from 'react'
 import FetchImages from '@/components/FetchImages'
 
 const photoElem = FetchImages()
