@@ -1,5 +1,6 @@
 import './globals.css'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 type Props = {
   children: React.ReactNode
@@ -24,6 +25,7 @@ const RootLayout = ({ children }: Props) => {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
