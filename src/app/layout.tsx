@@ -1,6 +1,7 @@
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Filter from '@/components/Filter'
 
 type Props = {
   children: React.ReactNode
@@ -24,7 +25,10 @@ const RootLayout = ({ children }: Props) => {
       </head>
       <body>
         <Header />
+        <Filter />
+
         {children}
+
         <Footer />
       </body>
     </html>
