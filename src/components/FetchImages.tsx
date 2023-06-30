@@ -30,8 +30,20 @@ const renderPhoto = (photo: Photo) => {
     )
 }
 
-const FetchImages = async (query: String, per_page: Number) => {
-    const res = await axios.get(`https://api.pexels.com/v1/search?query=${query}&per_page=${per_page}`, {
+const FetchImages = async (query?: String, per_page?: Number) => {
+
+    if (!per_page) {
+        per_page = 20
+    }
+
+    let url = ''
+    if (!query) {
+        url = `https://api.pexels.com/v1/curated?per_page=${per_page}`
+    } else {
+        url = `https://api.pexels.com/v1/search?query=${query}&per_page=${per_page}`
+    }
+
+    const res = await axios.get(url, {
         headers: {
             Authorization: process.env.PEXELS_API!,
         },

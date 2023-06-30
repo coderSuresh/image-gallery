@@ -1,7 +1,7 @@
 import React from 'react'
 import FetchImages from '@/components/FetchImages'
 
-const photoElem = FetchImages("nature", 20)
+const photoElem = FetchImages()
 
 const Home = () => {
   return (
