@@ -5,7 +5,7 @@ type Photo = {
     id: number,
     src: {
         large2x: string,
-        medium: string,
+        portrait: string,
     },
     alt: string,
     width: number,
@@ -14,11 +14,11 @@ type Photo = {
 
 const renderPhoto = (photo: Photo) => {
     return (
-        <div className="card min-w-48 min-h-60 w-48 h-60 overflow-hidden rounded" key={photo.id}>
+        <div className="card overflow-hidden rounded" key={photo.id}>
             <Image
                 key={photo.id}
-                className='hover:scale-110 cursor-pointer transition-transform duration-300 w-full h-full rounded'
-                src={photo.src.medium}
+                className='hover:scale-110 object-contain cursor-pointer transition-transform duration-300 w-full h-full rounded'
+                src={photo.src.portrait}
                 alt={photo.alt}
                 width={photo.width}
                 height={photo.height}
@@ -30,8 +30,8 @@ const renderPhoto = (photo: Photo) => {
     )
 }
 
-const FetchImages = async () => {
-    const res = await axios.get("https://api.pexels.com/v1/search?query=forest&per_page=5", {
+const FetchImages = async (query: String, per_page: Number) => {
+    const res = await axios.get(`https://api.pexels.com/v1/search?query=${query}&per_page=${per_page}`, {
         headers: {
             Authorization: process.env.PEXELS_API!,
         },
