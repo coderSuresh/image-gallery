@@ -6,8 +6,7 @@ const photoElem = FetchImages()
 const Home = () => {
   return (
     <main>
-      <h1 className="text-4xl font-bold text-center mt-10 mb-5">Image Gallery</h1>
-      <div className="gallery flex gap-5 flex-wrap">{photoElem}</div>
+      <div className="gallery flex gap-5 justify-center mt-10 flex-wrap">{photoElem}</div>
     </main>
   )
 }

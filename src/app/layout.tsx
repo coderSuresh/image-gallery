@@ -1,5 +1,5 @@
 import './globals.css'
-import React from 'react'
+import Header from '@/components/Header'
 
 type Props = {
   children: React.ReactNode
@@ -22,6 +22,7 @@ const RootLayout = ({ children }: Props) => {
         <title>{metadata.title}</title>
       </head>
       <body>
+        <Header />
         {children}
       </body>
     </html>
