@@ -20,3 +20,8 @@ body {
 .hide_scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.hide_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
