@@ -1,8 +1,14 @@
 import FetchImages from "@/components/FetchImages"
 
-const Nature = () => {
+type Params = {
+    params: {
+        slug: string
+    }
+}
 
-    const photoElem = FetchImages("science")
+const Nature = ({ params }: Params) => {
+
+    const photoElem = FetchImages(params.slug)
 
     return (
         <main>
