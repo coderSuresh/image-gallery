@@ -23,7 +23,7 @@ const renderPhoto = (photo: Photo) => {
                 width={photo.width}
                 height={photo.height}
                 placeholder='blur'
-                blurDataURL={photo.src.large2x}
+                blurDataURL='/images/placeholder.jpg'
                 priority={true}
             />
         </div>
