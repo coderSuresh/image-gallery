@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Image Gallery
 
-## Getting Started
+This is a simple image gallery built with NextJS and TailwindCSS. It uses the Pexels API to fetch images.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Links](#links)
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Technologies](#technologies)
+- [What I learned](#what-i-learned)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Links
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Live Site](https://image-gallery-codersuresh.vercel.app/)
+- [Github Repo](https://github.com/codersuresh/image-gallery)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshots
 
-## Learn More
+![screenshot](./public/screenshot.png)
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- view images
+- search images
+- filter images by given categories
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies
 
-## Deploy on Vercel
+- NextJS
+- TailwindCSS
+- Pexels API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## What I learned
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- how to use NextJS
+- how to use Pexels API in NextJS
+- how to use NextJS Image component
+- how to use NextJS Link component
+- how to use NextJS Router
