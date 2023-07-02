@@ -3,19 +3,8 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 const Filter = () => {
-  const [isDropDownVisible, setIsDropDownVisible] = useState(false)
-  const [filter, setFilter] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
-
-  const handleDropDown = () => {
-    setIsDropDownVisible((oldDropDownState) => !oldDropDownState)
-  }
-
-  const handleFilter = (e: React.MouseEvent<HTMLLIElement>) => {
-    setFilter(e.currentTarget.textContent!)
-    setIsDropDownVisible(false)
-  }
 
   const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -41,34 +30,6 @@ const Filter = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyUp={handleEnterPress}
           />
-        </div>
-        <div className="filter flex relative">
-          <button
-            onClick={handleDropDown}
-            className="px-4 py-2 border min-w-[125px] border-gray-300 hover:bg-gray-100"
-          >
-            {filter}
-          </button>
-          <ul className={`absolute ${isDropDownVisible ? 'block' : 'hidden'} top-10 left-0`}>
-            <li
-              onClick={handleFilter}
-              className="px-4 py-2 border border-gray-300 min-w-[125px] bg-white cursor-pointer hover:bg-gray-100"
-            >
-              All
-            </li>
-            <li
-              onClick={handleFilter}
-              className="px-4 py-2 border border-gray-300 min-w-[125px] bg-white cursor-pointer hover:bg-gray-100"
-            >
-              Landscape
-            </li>
-            <li
-              onClick={handleFilter}
-              className="px-4 py-2 border border-gray-300 min-w-[125px] bg-white cursor-pointer hover:bg-gray-100"
-            >
-              Portrait
-            </li>
-          </ul>
         </div>
       </div>
     </div>
