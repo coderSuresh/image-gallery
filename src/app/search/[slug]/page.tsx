@@ -8,7 +8,7 @@ type Params = {
 
 const Search = ({ params }: Params) => {
 
-    const photoElem = FetchImages(params.slug)
+    const photoElem = FetchImages({ query: params.slug})
 
     return (
         <main>

@@ -30,11 +30,15 @@ const renderPhoto = (photo: Photo) => {
     )
 }
 
-const FetchImages = async (query?: String, per_page?: Number) => {
+type FilterProps = {
+    query?: string,
+    per_page?: number,
+}
 
-    if (!per_page) {
-        per_page = 20
-    }
+const FetchImages = async (filterProps: FilterProps) => {
+
+    let query = filterProps?.query || ''
+    let per_page = filterProps?.per_page || 20
 
     let url = ''
     if (!query) {

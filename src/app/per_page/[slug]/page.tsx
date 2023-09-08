@@ -2,13 +2,13 @@ import FetchImages from "@/components/FetchImages"
 
 type Params = {
     params: {
-        slug: string
+        slug: number
     }
 }
 
-const Nature = ({ params }: Params) => {
+const PerPage = ({ params }: Params) => {
 
-    const photoElem = FetchImages({ query: params.slug})
+    const photoElem = FetchImages({ per_page: params.slug })
 
     return (
         <main>
@@ -17,4 +17,4 @@ const Nature = ({ params }: Params) => {
     )
 }
 
-export default Nature
+export default PerPage

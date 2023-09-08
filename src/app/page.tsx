@@ -1,6 +1,6 @@
 import FetchImages from '@/components/FetchImages'
 
-const photoElem = FetchImages()
+const photoElem = FetchImages({})
 
 const Home = () => {
   return (
